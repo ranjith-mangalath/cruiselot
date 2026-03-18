@@ -20,6 +20,9 @@ export class AddtoFavorite {
     get addToFavoriteButton() {
         return this.page.getByRole('button', { name: 'Add to favorites' });
     }
+    get addToFavoriteButton1() {
+        return this.page.getByRole('button', { name: 'Add to favorites1' });
+    }
     get removeFromFavoriteButton() {
         return this.page.getByRole('button', { name: 'Remove from favorites' });
     }
