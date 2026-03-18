@@ -26,6 +26,9 @@ export class AddtoFavorite {
     get removeFromFavoriteButton() {
         return this.page.getByRole('button', { name: 'Remove from favorites' });
     }
+    get removeFromFavoriteButton1() {
+        return this.page.getByRole('button', { name: 'Remove from favorites1' });
+    }
     async ensureItemIsFavorited() {
         // Wait for either the add or remove button to be visible first
         await expect(this.addToFavoriteButton.or(this.removeFromFavoriteButton).first()).toBeVisible({ timeout: 30000 });
