@@ -1,0 +1,28 @@
+{
+  "name": "playwright_ts_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test --config=playwright.config.ts --project=chrome",
+    "test:login": "npx playwright test --grep @login --config=playwright.config.ts --project=chrome",
+    "test:smoke": "npx playwright test --grep @smoke --config=playwright.config.ts --project=chrome",
+    "test:regression": "npx playwright test --grep @regression --config=playwright.config.ts --project=chrome",
+    "test:login-smoke": "npx playwright test --grep @login --grep @smoke --config=playwright.config.ts --project=chrome",
+    "test:login-regression": "npx playwright test --grep \"(?=.*@login)(?=.*@regression)\" --config=playwright.config.ts --project=chrome",
+    "test:smoke-regression": "npx playwright test --grep \"@smoke|@regression\" --config=playwright.config.ts --project=chrome",
+    "test:dir": "npx playwright test tests/login --config=playwright.config.ts --project=chrome",
+    "test:dir-smoke": "npx playwright test tests/login --grep @smoke --config=playwright.config.ts --project=chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.5",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
