@@ -14,7 +14,7 @@ export class LoginPage extends HeaderComponents {
     }
 
     get passwordField() {
-        return this.page.getByPlaceholder('Enter your password')
+        return this.page.getByPlaceholder('Enter your password');
     }
     async enterPassword(password: string) {
         await this.passwordField.fill('Pass@123');
